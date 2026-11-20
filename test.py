@@ -134,7 +134,23 @@ def afficher_130(limitation):#affiche les vitesses supérieures à 130km/h
 
 
         
-            
+def compteur_limitation(limitation,chemin="data.csv"): 
+     compteur=0
+     with open(chemin,mode='r',encoding='utf-8') as fichier:
+          fichier_csv = csv.DictReader(fichier, delimiter=',')
+          for ligne in fichier_csv:
+                          try:
+                              mesure=int(ligne["mesure"])
+                              limite=int(ligne["limite"])
+                          except ValueError:
+                              continue
+                          if limite==limitation and mesure>limitation:
+                               compteur= compteur+1
+                               return compteur
+
+print(compteur_limitation(70,"data/test.csv"))
+          
+          
 
 
 
@@ -165,11 +181,11 @@ def afficher_130(limitation):#affiche les vitesses supérieures à 130km/h
 #afficher_mesure()
 #afficher_flash()
 #afficher_limitation()
-afficher_70(70)
-afficher_80(80)
-afficher_90(90)
-afficher_110(110)
-afficher_130(130)
+#afficher_70(70)
+#afficher_80(80)
+#afficher_90(90)
+#afficher_110(110)
+#afficher_130(130)
 
 
 
