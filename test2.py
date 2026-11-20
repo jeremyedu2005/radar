@@ -1,4 +1,5 @@
 import csv
+#test pour idée de pagination et de compteur
 def compteur_limitation(limitation,chemin="data/data.csv"): 
     compteur=0
     with open(chemin,mode='r',encoding='utf-8') as fichier:
