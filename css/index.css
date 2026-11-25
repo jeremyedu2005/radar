@@ -19,9 +19,10 @@ h1 {
     font-size: 48px;
 }
 
-p {
+.selection {
     margin-bottom: 16px;
     margin: 10px;
+    font-size: 20px;
     
 }
 
@@ -50,5 +51,17 @@ a {
 
 .ajustement:hover{
     transform: scale(1.2); 
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Legales{
+    text-decoration: underline;
+    color:red
 }
 
