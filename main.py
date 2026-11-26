@@ -1,4 +1,3 @@
-
 import csv
 import os #idée de l'IA (permet d'intéragir avec le système d'exploitation)
 
@@ -68,7 +67,6 @@ def creer_page_html(limitation, morceau, numero_page, nb_pages, total_lignes):  
         page_html.write("</body>\n")
         page_html.write("</html>\n")
 
-
 def generer_pages_limitation(limitation, lignes_trouvees, par_page=500): #code généré par IA pour générer les pages suivantes
     os.makedirs("pages", exist_ok=True)
     total_lignes = len(lignes_trouvees)
@@ -118,36 +116,51 @@ def generer_tout(par_page=500):
     for vitesse in limitations:
         generer_pages_limitation(vitesse, donnees_par_limite[vitesse], par_page=par_page)
 
-
 generer_tout(par_page=500)
-                         
+                        
+### Mon idée + celle d' l'IA crée une fonctione qui permet de récupérer les voitures qui
+#qui ont fait un excès de vitesse au delà de la limite de vitesse recommandé 70km/h
+#def limitation_70(limitation):
+#    with open("data/data.csv", mode="r", encoding="utf-8") as fichier:
+ #       fichier_csv=csv.DictReader(fichier, delimiter=',')
 
+  #  with open("pages/limitation_70.html", mode="w", encoding="utf-8") as fichier_html:
+   #     fichier_html.write('''<!DOCTYPE html>
+#<html lang="fr">
+#<head>
+ #   <meta charset="utf-8">
+  #  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   # <link rel="stylesheet" href="../radar.css">
+    #<title>Limitation 70</title>
+#</head>
+#<body>
+ #   <h1>Limitation à 70km/h</h1>
+  #  <table border="1" width="100%">
+   #     <tr>
+    #        <th>Limitation</th>
+     #       <th>Excès</th>
+      #  </tr>
+#''')
 
-     
+    #    for vitesse in fichier_csv:
+     #       try:
+      #          limite=int(vitesse["limite"])
+       #         exces=int(vitesse["mesure"])
+        #    except ValueError:
+         #       continue
+          #  if limite==limitation and exces>limite:
+           #     fichier_html.write(f'''</tr>
+        #<td>{limite}</td>
+        #<td>{exces}</td>
+    #</tr>
+#''')
+ #           fichier_html('''   </table>
+#</body>
+#</html>
+#''')
+            
+#limitation_70(70)
 
-
-
-
-             
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
