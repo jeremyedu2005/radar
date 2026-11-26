@@ -39,12 +39,12 @@ def creer_page_html(limitation, morceau, numero_page, nb_pages, total_lignes):  
 
         if numero_page > 1:
                     page_html.write(
-                        f'        <a href="limitation_{limitation}_page{numero_page - 1}.html">Page précédente</a> '
+                        f'        <a class="precedente" href="limitation_{limitation}_page{numero_page - 1}.html">Page précédente</a> '
                     )
         
         if numero_page < nb_pages:
                     page_html.write(
-                        f'        <a href="limitation_{limitation}_page{numero_page + 1}.html">Page suivante</a>'
+                        f'        <a class="suivante" href="limitation_{limitation}_page{numero_page + 1}.html">Page suivante</a>'
                     )
         
 
