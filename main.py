@@ -1,4 +1,3 @@
-
 import csv
 import os #idée de l'IA (permet d'intéragir avec le système d'exploitation)
 
@@ -65,6 +64,9 @@ def creer_page_html(limitation, morceau, numero_page, nb_pages, total_lignes):  
             )
 
         page_html.write("\n    </p>\n")
+        page_html.write('<footer>\n')
+        page_html.write('    <p class="mentions">&copy; Droits d\'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a class="Legales" href="mentions_legales.html">Mentions légales</a></p>\n')
+        page_html.write('</footer>\n')
         page_html.write("</body>\n")
         page_html.write("</html>\n")
 
@@ -117,9 +119,7 @@ def generer_tout(par_page=500):
     for vitesse in limitations:
         generer_pages_limitation(vitesse, donnees_par_limite[vitesse], par_page=par_page)
 
-generer_tout(par_page=500)
-
-                        
+generer_tout(par_page=500)                        
 ### Mon idée + celle d' l'IA crée une fonctione qui permet de récupérer les voitures qui
 #qui ont fait un excès de vitesse au delà de la limite de vitesse recommandé 70km/h
 #def limitation_70(limitation):
