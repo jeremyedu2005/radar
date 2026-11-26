@@ -62,14 +62,13 @@ def creer_page_html(limitation, morceau, numero_page, nb_pages, total_lignes):  
             page_html.write(
                 f'        <a href="limitation_{limitation}_page{numero_page + 1}.html">Page suivante</a>'
             )
-
         page_html.write("\n    </p>\n")
         page_html.write('<footer>\n')
         page_html.write('    <p class="mentions">&copy; Droits d\'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a class="Legales" href="mentions_legales.html">Mentions légales</a></p>\n')
         page_html.write('</footer>\n')
         page_html.write("</body>\n")
         page_html.write("</html>\n")
-
+        
 def generer_pages_limitation(limitation, lignes_trouvees, par_page=500): #code généré par IA pour générer les pages suivantes
     os.makedirs("pages", exist_ok=True)
     total_lignes = len(lignes_trouvees)
@@ -120,6 +119,7 @@ def generer_tout(par_page=500):
         generer_pages_limitation(vitesse, donnees_par_limite[vitesse], par_page=par_page)
 
 generer_tout(par_page=500)                        
+
 ### Mon idée + celle d' l'IA crée une fonctione qui permet de récupérer les voitures qui
 #qui ont fait un excès de vitesse au delà de la limite de vitesse recommandé 70km/h
 #def limitation_70(limitation):
