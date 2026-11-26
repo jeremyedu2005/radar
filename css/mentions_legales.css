@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* Mettre quand on veut faire du display flex*/
+}
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.titre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    color: red
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.admin,
+.hébergeur,
+.Propriété,
+.Activité,
+.Cookies,
+.Description,
+.footer,
+.mentions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}

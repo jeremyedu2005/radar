@@ -1,3 +1,4 @@
+
 import csv
 import os #idée de l'IA (permet d'intéragir avec le système d'exploitation)
 
@@ -117,6 +118,7 @@ def generer_tout(par_page=500):
         generer_pages_limitation(vitesse, donnees_par_limite[vitesse], par_page=par_page)
 
 generer_tout(par_page=500)
+
                         
 ### Mon idée + celle d' l'IA crée une fonctione qui permet de récupérer les voitures qui
 #qui ont fait un excès de vitesse au delà de la limite de vitesse recommandé 70km/h
