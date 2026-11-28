@@ -38,14 +38,20 @@ def creer_page_html(limitation, morceau, numero_page, nb_pages, total_lignes):  
         )
 
         if numero_page > 1:
-                    page_html.write(
-                        f'        <a class="precedente" href="limitation_{limitation}_page{numero_page - 1}.html">Page précédente</a> '
-                    )
+            page_html.write(
+                f'        <a class="precedente" href="limitation_{limitation}_page{numero_page - 1}.html">Page précédente</a> '
+                )
         
         if numero_page < nb_pages:
-                    page_html.write(
-                        f'        <a class="suivante" href="limitation_{limitation}_page{numero_page + 1}.html">Page suivante</a>'
-                    )
+            page_html.write(
+                f'        <a class="suivante" href="limitation_{limitation}_page{numero_page + 1}.html">Page suivante</a>'
+                )
+
+        if numero_page==numero_page:
+            page_html.write(
+                f'<a class="accueil" href="../index.html">Page accueil</a>'
+            )
+             
         
 
         page_html.write('    <table border="1" width="100%">\n')
@@ -74,6 +80,11 @@ def creer_page_html(limitation, morceau, numero_page, nb_pages, total_lignes):  
             page_html.write(
                 f'        <a class="suivante" href="limitation_{limitation}_page{numero_page + 1}.html">Page suivante</a>'
             )
+
+        if numero_page==numero_page:
+            page_html.write(
+                f'<a class="accueil" href="../index.html">Page accueil</a>'
+            ) 
         page_html.write("\n    </p>\n")
         page_html.write('<footer>\n')
         page_html.write('    <p class="mentions">&copy; Droits d\'auteurs 2026 - RAODSON Miaro Jérémy - Tous droits réservés - <a class="Legales" href="mentions_legales.html">Mentions légales</a></p>\n')
