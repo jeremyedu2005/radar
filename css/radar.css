@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color:black;
+
+}
+
+h1{
+    display: flex;
+    font-size: 48px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:red;
+    
+}
+
+
+p{
+    font-size: 16px;
+}
+
+table{
+    margin-top: 20px;
+}
+
+.precedente{
+    color:red;
+    text-decoration: underline;
+    
+}
+
+.suivante{
+    color:green;
+    text-decoration: underline;
+}
+
+.accueil{
+    color: blue;
+    text-decoration: underline;
+}
+
+.precedente,.suivante,.accueil{
+    font-size: 12px;
+}
+
+.precedente:hover,.suivante:hover,.accueil:hover{
+    font-size: 14px;
+}
+
+td{
+    font-size: 14px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Legales{
+    text-decoration: underline;
+    color:red
+}
+
